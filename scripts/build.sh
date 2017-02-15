@@ -6,8 +6,11 @@ export MACHINE="${MACHINE-qemux86-64}"
 # What to build
 BUILD_TARGETS="
     xen-image-minimal \
-    xen-guest-image-minimal \
 "
+
+if [ "$MACHINE" == "qemux86-64" ]; then
+    BUILD_TARGETS="$BUILD_TARGETS xen-guest-image-minimal "
+fi
 
 die() {
     echo "$*" >&2
