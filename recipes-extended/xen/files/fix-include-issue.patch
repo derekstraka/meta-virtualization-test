@@ -1,0 +1,21 @@
+--- xen-4.8.0/tools/blktap2/control/tap-ctl-allocate.c.orig	2017-02-21 04:24:58.317792817 +0000
++++ xen-4.8.0/tools/blktap2/control/tap-ctl-allocate.c	2017-02-21 04:25:30.064613620 +0000
+@@ -34,6 +34,7 @@
+ #include <getopt.h>
+ #include <libgen.h>
+ #include <sys/stat.h>
++#include <sys/sysmacros.h>
+ #include <sys/types.h>
+ #include <sys/ioctl.h>
+ #include <linux/major.h>
+--- xen-4.8.0/tools/libxl/libxl_device.c.orig	2017-02-20 23:42:19.233805898 -0500
++++ xen-4.8.0/tools/libxl/libxl_device.c	2017-02-20 23:43:03.593938366 -0500
+@@ -15,7 +15,7 @@
+  */
+ 
+ #include "libxl_osdeps.h" /* must come before any other headers */
+-
++#include <sys/sysmacros.h>
+ #include "libxl_internal.h"
+ 
+ char *libxl__device_frontend_path(libxl__gc *gc, libxl__device *device)
