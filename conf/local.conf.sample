@@ -240,7 +240,3 @@ PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 # track the version of this file when it was generated. This can safely be ignored if
 # this doesn't mean anything to you.
 CONF_VERSION = "1"
-
-# The 2.6.2 version of flex does not work correctly with several packages
-# Use our provided version of flex instead
-PREFERRED_VERSION_flex = "2.6.0"
